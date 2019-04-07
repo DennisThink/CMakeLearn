@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+Project(CMakeDemo2)
+add_subdirectory(addStatic)
+add_subdirectory(subShared)
+add_subdirectory(mulClassStatic)
+add_subdirectory(divClassShared)
+add_subdirectory(main)

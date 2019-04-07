@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.0)
+#工程名称
+project(CMakeDemo1)
+
+#开启
+add_compile_options(/W3 /WX)
+
+SET(SOURCE_FILE main.cpp)
+#用来区分32和64位
+if(CMAKE_CL_64)
+    #64位
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/bin/Debug64/)    
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/bin/Release64/)
+else()
+    #32位
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/bin/Debug32/)    
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/bin/Release32/)
+endif()
+add_executable(Demo1 ${SOURCE_FILE})

@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.0)
+project(divShared)
+SET(DIV_SOURCE_FILE ./divClass.h ./divClass.cpp)
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../../lib)
+if(CMAKE_CL_64)
+    #64位的设置
+    set(CMAKE_DEBUG_POSTFIX "_64d")    
+    set(CMAKE_RELEASE_POSTFIX "_64r") 
+    SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/../../bin/Debug64/)
+    SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/../../bin/Release64/)
+else()
+    #32位的设置
+    set(CMAKE_DEBUG_POSTFIX "_32d")    
+    set(CMAKE_RELEASE_POSTFIX "_32r") 
+    SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${PROJECT_SOURCE_DIR}/../../bin/Debug32/)
+    SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${PROJECT_SOURCE_DIR}/../../bin/Release32/)
+endif()
+SET(BUILD_SHARED_LIBS ON)
+
+add_library(divShared ${DIV_SOURCE_FILE})
