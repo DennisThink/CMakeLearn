@@ -1,7 +1,7 @@
 # CMake和MSBuild学习笔记(3)------编译MFC
 
 ## 1. 目录结构介绍
-![Folder](./MFC_FOLDER_STRUCT.png)
+![Folder](https://www.dennisthink.com/wp-content/uploads/2019/04/MFC_FOLDER_STRUCT.png)
 
 1. Build32.bat和Build64.bat分别是32位和64位的编译脚本。
 2. CMakeMFC1/CMakeMFC1/CMakeLists.txt 是MFC程序的CMake编译脚本。
@@ -96,7 +96,7 @@ MFCDemo1.exe
 
 ## 4.编译后的结果
 
-![after_build](./after_build.png)
+![after_build](https://www.dennisthink.com/wp-content/uploads/2019/04/after_build.png)
 
 
 图中红色的方框里就是编译出的结果。中间文件都在Build32目录下，这样源代码和中间的编译结果彻底的分开了。
