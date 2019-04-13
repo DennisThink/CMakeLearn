@@ -9,4 +9,5 @@ MSBuild.exe CMakeMFCDemo1.sln -property:Configuration=Debug
 MSBuild.exe CMakeMFCDemo1.sln -property:Configuration=Release
 cd ..
 cd bin
+cd Debug32
 MFCDemo1.exe
